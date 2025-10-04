@@ -23,7 +23,7 @@ window.PROJECTS = [
         tags: ["python", "opencv", "machine learning", "ai", "vision", "brain"]
     },
     {
-        name: "QAGENT,
+        name: "QAGENT",
         description: "Lightweight static site that syncs README files into a searchable documentation hub.",
         githubUrl: "https://github.com/jblacketter/qaagent",
         deployedUrl: "",
