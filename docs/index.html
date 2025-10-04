@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Command Center</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-wrapper">
+            <h1>Project Command Center</h1>
+            <p class="tagline">Showcase your work without servers or databases.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <p>Use this static site to highlight your favorite repositories. Update the project list, push to GitHub, and serve it for free with GitHub Pages.</p>
+        </section>
+
+        <form class="search-container" id="filterForm">
+            <label for="search" class="visually-hidden">Search Projects</label>
+            <input
+                id="search"
+                type="text"
+                name="search"
+                placeholder="Search projects..."
+                autocomplete="off"
+            >
+
+            <label for="status" class="visually-hidden">Filter by status</label>
+            <select id="status" name="status">
+                <option value="all">All Status</option>
+                <option value="completed">Completed</option>
+                <option value="in_progress">In Progress</option>
+                <option value="planned">Planned</option>
+            </select>
+
+            <button type="submit">Search</button>
+        </form>
+
+        <div class="project-grid" id="projectGrid" aria-live="polite"></div>
+        <p class="empty-state" id="emptyState" hidden>No projects found. Update your search or add more items to <code>projects.js</code>.</p>
+    </main>
+
+    <noscript>
+        <p class="noscript">JavaScript is required to render the project cards. Enable JavaScript or generate static markup.</p>
+    </noscript>
+
+    <script src="projects.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
